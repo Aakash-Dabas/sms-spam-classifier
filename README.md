@@ -1,77 +1,71 @@
-# SMS Spam Classifier
+# 📩 SMS Spam Classifier
 
-An end-to-end SMS spam classification project using Natural Language Processing (NLP) and Machine Learning. The project classifies SMS messages as either **Spam** or **Not Spam (Ham)** and includes an interactive Streamlit web application for real-time prediction.
+A machine learning project that classifies SMS/Email messages as **Spam** or **Not Spam (Ham)** using Natural Language Processing (NLP) and a Multinomial Naive Bayes classifier.
 
-## Project Overview
+The project includes a complete machine learning pipeline from text preprocessing and feature extraction to model training and deployment through a Streamlit web application.
 
-SMS spam messages are unwanted messages that may contain advertisements, scams, or fraudulent content. This project uses Natural Language Processing and Machine Learning techniques to automatically identify whether a given SMS message is spam.
+## 🚀 Application Preview
 
-## Features
+![SMS Spam Classifier](app-screenshot.png)
 
-- Data cleaning and preprocessing
-- Exploratory Data Analysis (EDA)
-- Natural Language Processing (NLP)
-- Text tokenization and preprocessing
-- TF-IDF text vectorization
-- Machine Learning classification
-- Spam/Ham prediction
-- Interactive Streamlit web application
-- Real-time SMS classification
+The application allows users to enter a message and instantly receive a prediction indicating whether the message is **Spam** or **Ham**.
 
-## Technologies Used
+## 🎯 Project Objective
+
+The goal of this project is to build a text classification system capable of identifying unwanted or fraudulent SMS messages using machine learning and NLP techniques.
+
+## 🛠️ Technologies Used
 
 - Python
 - Pandas
 - NumPy
-- NLTK
 - Scikit-learn
-- Matplotlib
-- Seaborn
+- NLTK
 - Streamlit
 - Jupyter Notebook
 
-## Project Workflow
+## 🔍 Machine Learning Workflow
 
-**SMS Dataset → Data Cleaning → EDA → Text Preprocessing → TF-IDF Vectorization → Machine Learning Model → Model Evaluation → Streamlit Web Application → Spam/Ham Prediction**
+The project follows these main steps:
 
-## Project Files
+1. Data loading and exploration
+2. Text preprocessing
+3. Lowercasing
+4. Tokenization
+5. Removal of punctuation and non-alphanumeric characters
+6. Stopword removal
+7. Stemming using Porter Stemmer
+8. TF-IDF feature extraction
+9. Train-test split
+10. Model training and evaluation
+11. Saving the trained model and vectorizer
+12. Deployment using Streamlit
 
-| File | Description |
-|---|---|
-| `sms-spam-detection.ipynb` | Jupyter Notebook containing data analysis, preprocessing, model training and evaluation |
-| `app.py` | Streamlit application for the web interface and SMS prediction |
-| `model.pkl` | Trained machine learning model |
-| `vectorizer.pkl` | Saved text vectorizer |
-| `spam.csv` | SMS spam dataset |
-| `requirements.txt` | Python dependencies required to run the project |
+## 🤖 Machine Learning Model
 
-## How to Run
+The final application uses **Multinomial Naive Bayes (MultinomialNB)** for SMS classification.
 
-### 1. Clone the repository
+The model is trained on TF-IDF-transformed text data and saved using Python Pickle so that the trained model can be reused directly by the Streamlit application.
 
-`git clone https://github.com/Aakash-Dabas/sms-spam-classifier.git`
+### Model Performance
 
-### 2. Install the required libraries
+On the test set, the Multinomial Naive Bayes model achieved approximately:
 
-`pip install -r requirements.txt`
+- **Accuracy:** 97.10%
+- **Precision:** 100%
 
-### 3. Run the Streamlit application
+These results are based on the evaluation performed in the project notebook.
 
-`streamlit run app.py`
+## 📂 Project Structure
 
-### 4. Open the application
-
-After running the command, Streamlit will provide a local URL. Open the URL in your web browser to use the SMS Spam Classifier.
-
-## Example
-
-Enter an SMS message into the application and the model predicts whether the message is:
-
-- **Spam**
-- **Not Spam (Ham)**
-
-## Author
-
-**Aakash Dabas**
-
-B.Tech Student | Aspiring Data Analyst & Data Scientist
+```text
+SMS-Spam-Classifier/
+│
+├── app.py
+├── model.pkl
+├── vectorizer.pkl
+├── sms-spam-detection.ipynb
+├── spam.csv
+├── requirements.txt
+├── README.md
+└── app-screenshot.png
