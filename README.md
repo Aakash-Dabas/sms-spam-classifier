@@ -1,20 +1,21 @@
 # SMS Spam Classifier
 
-An end-to-end SMS spam classification project using Natural Language Processing (NLP) and Machine Learning. The project classifies SMS messages as either **Spam** or **Not Spam (Ham)** and includes a web application for real-time prediction.
+An end-to-end SMS spam classification project using Natural Language Processing (NLP) and Machine Learning. The project classifies SMS messages as either **Spam** or **Not Spam (Ham)** and includes an interactive Streamlit web application for real-time prediction.
 
 ## Project Overview
 
-SMS spam messages are unwanted messages that may contain advertisements, scams, or fraudulent content. This project uses machine learning and NLP techniques to automatically identify whether a given SMS message is spam.
+SMS spam messages are unwanted messages that may contain advertisements, scams, or fraudulent content. This project uses Natural Language Processing and Machine Learning techniques to automatically identify whether a given SMS message is spam.
 
 ## Features
 
 - Data cleaning and preprocessing
 - Exploratory Data Analysis (EDA)
 - Natural Language Processing (NLP)
-- Text vectorization using TF-IDF
+- Text tokenization and preprocessing
+- TF-IDF text vectorization
 - Machine Learning classification
 - Spam/Ham prediction
-- Flask web application
+- Interactive Streamlit web application
 - Real-time SMS classification
 
 ## Technologies Used
@@ -26,19 +27,19 @@ SMS spam messages are unwanted messages that may contain advertisements, scams, 
 - Scikit-learn
 - Matplotlib
 - Seaborn
-- Flask
+- Streamlit
 - Jupyter Notebook
 
 ## Project Workflow
 
-**SMS Dataset → Data Cleaning → EDA → Text Preprocessing → TF-IDF Vectorization → Machine Learning Model → Model Evaluation → Flask Web Application → Spam/Ham Prediction**
+**SMS Dataset → Data Cleaning → EDA → Text Preprocessing → TF-IDF Vectorization → Machine Learning Model → Model Evaluation → Streamlit Web Application → Spam/Ham Prediction**
 
 ## Project Files
 
 | File | Description |
 |---|---|
 | `sms-spam-detection.ipynb` | Jupyter Notebook containing data analysis, preprocessing, model training and evaluation |
-| `app.py` | Flask application for the web interface |
+| `app.py` | Streamlit application for the web interface and SMS prediction |
 | `model.pkl` | Trained machine learning model |
 | `vectorizer.pkl` | Saved text vectorizer |
 | `spam.csv` | SMS spam dataset |
@@ -46,10 +47,21 @@ SMS spam messages are unwanted messages that may contain advertisements, scams, 
 
 ## How to Run
 
-1. Clone this repository.
-2. Install the required Python libraries using `pip install -r requirements.txt`.
-3. Run the Flask application using `python app.py`.
-4. Open the local URL displayed in the terminal in your web browser.
+### 1. Clone the repository
+
+`git clone https://github.com/Aakash-Dabas/sms-spam-classifier.git`
+
+### 2. Install the required libraries
+
+`pip install -r requirements.txt`
+
+### 3. Run the Streamlit application
+
+`streamlit run app.py`
+
+### 4. Open the application
+
+After running the command, Streamlit will provide a local URL. Open the URL in your web browser to use the SMS Spam Classifier.
 
 ## Example
 
